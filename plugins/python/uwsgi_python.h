@@ -306,6 +306,8 @@ int uwsgi_python_tracer(PyObject *, PyFrameObject *, int, PyObject *);
 
 void uwsgi_python_reset_random_seed(void);
 
+void uwsgi_python_reset_preinit(void);
+
 char *uwsgi_pythonize(char *);
 void *uwsgi_python_autoreloader_thread(void *);
 void *uwsgi_python_tracebacker_thread(void *);

@@ -360,6 +360,11 @@ void uwsgi_python_reset_random_seed() {
         }
 }
 
+void uwsgi_python_reset_preinit() {
+       up.pre_initialized = 0;
+       // TODO Should probably avoid leaking all of the allocated structures
+}
+
 
 void uwsgi_python_atexit() {
 
