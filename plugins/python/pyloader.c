@@ -121,7 +121,7 @@ int init_uwsgi_app(int loader, void *arg1, struct wsgi_request *wsgi_req, PyThre
         	PyObject *os_module = PyImport_ImportModule("os");
         	if (os_module) {
                 	PyObject *os_module_dict = PyModule_GetDict(os_module);
-                	PyObject *py_environ = PyDict_GetItemString(os_module_dict, "environ");
+                	PyObject *py_environ = PyDict_GetItemString(os_module_dict, "environb");
 			if (py_environ) {
                 		for (e = environ; *e != NULL; e++) {
                         		p = strchr(*e, '=');
